@@ -14,3 +14,9 @@ jobs:
 #      - run: docker run -e CI=true cygnetops/react-test npm test
       - run: docker build -t cygnetops/react-app .
       - run: docker run -p 8080:80 -e CI=true cygnetops/react-app
+  
+  stop:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v3
+    - run: docker stop cygnetops/react-app
