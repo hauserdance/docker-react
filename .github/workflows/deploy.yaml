@@ -13,4 +13,4 @@ jobs:
 #      - run: docker build -t cygnetops/react-test -f Dockerfile.dev .
 #      - run: docker run -e CI=true cygnetops/react-test npm test
       - run: docker build -t cygnetops/react-app .
-      - run: docker run -p 80:80 -e CI=true cygnetops/react-app
+      - run: docker run -p 8080:80 -e CI=true cygnetops/react-app
